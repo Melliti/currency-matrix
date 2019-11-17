@@ -14,8 +14,8 @@ class Matrix:
         value = 1 / self.matrix[idx][0]
         self.matrix[0][idx] = float(format(value, '.5f'))
         idx += 1
-        self.fillFirstRow(idx)
-
+        if (idx != len(self.matrix)):
+            self.fillFirstRow(idx)
 
     # second method called. Using the first column and the first row,
     # fill every row from left to the right
@@ -27,7 +27,8 @@ class Matrix:
                 self.matrix[idx][i] = float(format(value, '.5f'))
             i += 1
         idx += 1
-        self.fillRows(idx)
+        if (idx != len(self.matrix)):
+            self.fillRows(idx)
     
     # Print matrix values
     def descMatrix(self, countries):

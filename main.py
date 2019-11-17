@@ -23,10 +23,10 @@ if (len(sys.argv) > 1):
         csvReader.extractCSVData(sys.argv[1], matrix.matrix)
 
 while i < len(matrix.matrix):
-    matrix.fillFirstLine(i)
+    matrix.fillFirstRow(i)
     i += 1
 while s < len(matrix.matrix):
-    matrix.fillLines(s)
+    matrix.fillRows(s)
     s += 1
 if (len(sys.argv) > 1):
     matrix.descMatrix(csvReader.countries)
